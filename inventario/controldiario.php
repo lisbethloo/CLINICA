@@ -45,7 +45,8 @@ $fecha = date('d-m-Y ');
 					<div class="text1"> </span></div>
 					</li>
 						<li ><a href="../index.php">Inicio</a></li>
-						<li ><a href="../historiap/pacienteslista.php">Ficha de paciente</a></li>
+						<li ><a href="../historiap/historiap.php">Ficha de paciente</a></li>
+						<li ><a href="../historiap/pacienteslista.php">Lista de paciente</a></li>
 						<li><a href="../cirugia/pabellonmenu.php">Calendario</a></li>
 						<li id="menu_active"><a href="indexinventario.php">Inventario</a></li>
 						<li><a href="../sistema/sistemamenu.php">Sistema</a></li>

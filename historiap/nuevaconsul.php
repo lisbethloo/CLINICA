@@ -115,7 +115,8 @@ $fecha = date('y-m-d H:i:s',$tiempo);
 						<li><center><figure class="left marg_right1"></figure>
 						</center><div class="text1"></span></div></li>
 						<li><a onClick="return confirm('Esta seguro que desea ingresar al menu inicio? perderas los registros que no se hayan guardado');" href="../index.php">Inicio</a></li>
-						<li id="menu_active" class="bg_none"><a onClick="return confirm('Esta seguro que desea ingresar a la lista de  pediatria? perderas los registros que no se hayan guardado');" href="pacienteslista.php">Ficha de paciente </a></li>
+						<li id="menu_active" class="bg_none"><a onClick="return confirm('Esta seguro que desea ingresar a la ficha de  pacientes? perderas los registros que no se hayan guardado');" href="historiap.php">Ficha de paciente </a></li>
+						<li id="menu_active" class="bg_none"><a onClick="return confirm('Esta seguro que desea ingresar a la lista de  pacientes? perderas los registros que no se hayan guardado');" href="pacienteslista.php">Lista de paciente </a></li>
 						<li><a onClick="return confirm('Esta seguro que desea ingresar al menu pabellon? perderas los registros que no se hayan guardado');" href="../cirugia/pabellonmenu.php">Calendario</a></li>
 						<li><a onClick="return confirm('Esta seguro que desea ingresar al menu inventario? perderas los registros que no se hayan guardado');" href="../inventario/indexinventario.php">Inventario</a></li>
 						<li><a onClick="return confirm('Esta seguro que desea ingresar al menu sistema? perderas los registros que no se hayan guardado');"href="../sistema/sistemamenu.php">Sistema</a></li>

@@ -19,6 +19,7 @@ require 'conectar.php'; ?>
 <head>
 <title>Index</title>
 <meta charset="utf-8">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <link rel="icon"  href="images/logito.png" type="image/x-icon"/>
 <link rel="stylesheet" href="css/reset.css" type="text/css" media="all">
 <link rel="stylesheet" href="css/layout.css" type="text/css" media="all">
@@ -28,6 +29,11 @@ require 'conectar.php'; ?>
 <script type="text/javascript" src="js/cufon-replace.js"></script> 
 <script type="text/javascript" src="js/Myriad_Pro_300.font.js"></script>
 <script type="text/javascript" src="js/Myriad_Pro_400.font.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<script src="https://kit.fontawesome.com/c675b21c5b.js" crossorigin="anonymous"></script>
 <!--[if lt IE 9]>
 	<script type="text/javascript" src="http://info.template-help.com/files/ie6_warning/ie6_script_other.js"></script>
 	<script type="text/javascript" src="js/html5.js"></script>
@@ -48,8 +54,8 @@ require 'conectar.php'; ?>
 					<div class="text1"></span></div>
 					</li>
 						<li id="menu_active"><a href="index.php">Inicio</a></li>
-						<li ><a title="LISTA DE LOS PACIENTES DE PEDIATRIA" href="historiap/pacienteslista.php">Ficha de paciente</a></li>
-						
+						<li ><a title="FICHA DE LOS PACIENTES " href="historiap/historiap.php">Ficha de paciente</a></li>
+						<li ><a title="LISTA DE LOS PACIENTES" href="historiap/pacienteslista.php">Lista de paciente</a></li>
 						<li><a  title="MENU DE CIRUGIAS" href="cirugia/pabellonmenu.php">Calendario</a></li>
 						<li><a title="INVENTARIO DE LA FARMACIA" href="inventario/indexinventario.php">Inventario</a></li>
 						<li><a title="OPCIONES DEL SISTEMA " href="sistema/sistemamenu.php">Sistema</a></li>
@@ -87,11 +93,22 @@ require 'conectar.php'; ?>
 	
 <br>
 <br>
-   <b>Busqueda Por Descripcion</b><br><br>
-    <input name="txtbus" type=text   placeholder='nombre,apellido, etc... .....'>
-    <br></br>
-    <input  name="btn1" type="submit" value="Buscar">
-	<a> </a><input  name="btn1" type="submit" value="Agregar Paciente Nuevo">
+   <b>Busqueda Por Descripcion</b><br><br><div class="input-group flex-nowrap">
+  <div class="container">
+	  <div class="row">
+	      <div class="col-md-4">
+	 
+				<div class="input-group-prepend">
+					<!--span class="input-group-text" id="addon-wrapping"><i class="fas fa-search"></i></span-->
+					</div>
+					<input name="txtbus" type=text  class="form-control"  placeholder='nombre,apellido, etc... .....' aria-label="Username" aria-describedby="addon-wrapping">
+					</div>
+			<div>
+		</div>
+  </div>
+	<br><br>
+    <input  name="btn1" type="submit" class="btn btn-dark" value="Buscar">
+	<a> </a><input  name="btn1" type="submit" class="btn btn-dark" value="Agregar Paciente Nuevo">
     
     
   </form>
@@ -115,9 +132,10 @@ $Rs = mysqli_fetch_assoc($movimiento);
 				
 				<div class="wrapper marg_top pad_bot1">
 					
-	<table style="border:1px ; color: #000000; width:350px; text-align:center;">
+	<table style= "border:1px ; color: #000000; width:350px; text-align:center;">
 <tr style="background: #f1e322">
-    <td>Nº</td>
+   
+	<td>Nº</td>
     <td>NOMBRE</td>
 	<td>APELLIDO</td>
 	<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>

@@ -47,18 +47,24 @@ $fecha = date('y-m-d H:i:s',$tiempo);
 <script src="../jquery/validarvacios.js"></script>
    <script src="../jquery/validar2.js"></script>
 <meta charset="utf-8">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <link rel="stylesheet" href="../css/reset.css" type="text/css" media="all">
 <link rel="stylesheet" href="../css/layout.css" type="text/css" media="all">
 <link rel="stylesheet" href="../css/style.css" type="text/css" media="all">
-
+<link rel="stylesheet" href="css/form.css">
 <script type="text/javascript" src="../js/cufon-yui.js"></script>
 <script type="text/javascript" src="../js/cufon-replace.js"></script> 
 <script type="text/javascript" src="../js/Myriad_Pro_300.font.js"></script>
 <script type="text/javascript" src="../js/Myriad_Pro_400.font.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
+<script src="https://kit.fontawesome.com/c675b21c5b.js" crossorigin="anonymous"></script>
 
 
 <link rel="stylesheet" href="../jquery/temas/base/jquery.ui.all.css">
+<link rel="stylesheet" href="../css/form.css" type="text/css" media="all">
 
 <script src="../jquery/ui/jquery.ui.core.js"></script>
 	<script src="../jquery/ui/jquery.ui.widget.js"></script>
@@ -115,7 +121,8 @@ $fecha = date('y-m-d H:i:s',$tiempo);
 						<li><center><figure class="left marg_right1"></figure>
 						</center><div class="text1"></span></div></li>
 						<li><a onClick="return confirm('Esta seguro que desea ingresar al menu inicio? perderas los registros que no se hayan guardado');" href="../index.php">Inicio</a></li>
-						<li id="menu_active" class="bg_none"><a onClick="return confirm('Esta seguro que desea ingresar a la lista de  pediatria? perderas los registros que no se hayan guardado');" href="pacienteslista.php">Ficha de pacientes </a></li>
+						<li id="menu_active" class="bg_none"><a onClick="return confirm('Esta seguro que desea ingresar a la ficha de pacientes? perderas los registros que no se hayan guardado');" href="historiap.php">Ficha de paciente </a></li>
+						<li id="menu_active" class="bg_none"><a onClick="return confirm('Esta seguro que desea ingresar a la lista de pacientes? perderas los registros que no se hayan guardado');" href="pacienteslista.php">Lista de paciente </a></li>
 						<li><a onClick="return confirm('Esta seguro que desea ingresar al menu pabellon? perderas los registros que no se hayan guardado');" href="../cirugia/pabellonmenu.php">Calendario</a></li>
 						<li><a onClick="return confirm('Esta seguro que desea ingresar al menu inventario? perderas los registros que no se hayan guardado');" href="../inventario/indexinventario.php">Inventario</a></li>
 						<li><a onClick="return confirm('Esta seguro que desea ingresar al menu sistema? perderas los registros que no se hayan guardado');"href="../sistema/sistemamenu.php">Sistema</a></li>
@@ -648,254 +655,88 @@ echo "<script> alert('Se Elimino Correctamente')</script>";
 
 ?>
 
+<!---=================================================formulario===================================================-->
 
-
-<div class="body3">
+<div >
 	<div class="main">
-		
-			
+		<section id="content_top">
+			<h2>Ficha de paciente</h2>
+
+
+			<nav aria-label="breadcrumb">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item"><a href="../historiap/historiap.php">Perfil del paciente</a></li>
+				<li class="breadcrumb-item"><a href="../historiap/razonC.php">Razon de la consulta</a></li>
+				<li class="breadcrumb-item"><a href="../historiap/Areaad.php">Area administrativa</a></li>
+				<li class="breadcrumb-item "><a href="../historiap/descrip.php">Descripcion economica</li>
 				
-<section id="content_top"><h2>Ficha de paciente</h2>
-			
-			
+				
+				
+			</ol>
+			</nav>			
+						
 		</section>
+			l<div class="container">
+			<div cass="row">
+				<div class="col-md-12 col-xs-12 col-sm-12">
+			<form action="">
 			
-		
-	</div>
-</div>
-<section id="content">
-		<div class="wrapper pad_bot1">
+					<div class="container-form">
+					 <div class="container">
+						<h1>Perfil del paciente</h1>
+						<br>
+						<label class="perfil">Perfil<br></label><input type="submit" id="image" class="image">
+						<label class="fecha">Fecha<br></label> <input  type="date" id="date" class="date">
+						<p><label class="nombreapellido">Nombres y Apellidos:*<br></label> <input  type="text" class="nombreyapellido"><input type="text"class="nombreyapellido"></p>
+
+						<p>Genero:<br>
+							<input type="radio" name="hm">Masculino
+							<input type="radio" name="hm">Femenino
+						</p>
+						
+						<p>Direccion:*<br>
+							<input type="text" name="adress">
+						</p>
+
+						<p>Fecha de nacimiento:*<br>
+							<input type="datetime" id="daate">
+						</p>
+
+						<p>Telefono:*<br>
+							<input type="text" id="cel">
+						</p>
+
+						<p>Cedula:*<br>
+							<input type="number" id="ced">
+						</p>
+				</div>
+				</div>
+
+
+			</div>
+				<div class="body4">
+				<div class="main">
+					<div id="footer_menu">
+						<nav>
+							<ul>
+								<li><a href="pacienteslista.php">Listar</a></li>
+								<li class="bg_none"><input type="submit" name="btn1" value="Agregar"/></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+				</div>
+				</div>
 	
-		
-		
-	<center>
-		
-	
-<form  name="fe" action="" method="post" >
-		<br>
-		
-	<!-- <?php //echo $nameimagen ?> -->			
-				
-			<table> 
-				
-     <TR> 
-			<TD>BUSCAR
-          <input type="text" placeholder="A0000............" name="txtbus"/>
-          <input type="submit" name="btn1" value="Buscar" />
-		  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input  name="btn1" type="submit" value="Agregar Paciente Nuevo">
-		   
-		  </form>
-		  
-		  </td>
-          
-          
-         
- </TR>
-<center>
- </table> 
-
-
-
-  
-<form name="fe" action="" method="post"  enctype="multipart/form-data">
-		
-	<center><table style="border:1px  #666666; color:# 666666 ; width:60%;"><tr>
-	</center>
-				
-		<td>Foto de Perfil:	<a target='_blank' href=../webcam/index.php><img src='../images/camara2.png' width='20' alt='Edicion' title='TOMAR FOTOGRAFIA'></a> <input type="file" type="text" placeholder="<?php echo $nameimagen ?>" name="imagen"/>
-	<a></a>Expediente creado:		
-	<input type="text" placeholder="<?php echo $fecha ?>"name="fechac"  size="20" maxlength="20"   value="<?php echo $var25?>"/>
-	CODIGO:<input type="text"  border 1 px placeholder="..............................."name="txtcod"  size="10" maxlength="10"  required value="<?php echo $var?>"/> </td>
-</tr>
-</table>
-
-
-<table>
-        <tr>
-          <td>Nombre:
-          <input name='txtnom'  placeholder=".........................................................................................................."  type='text' maxlength='55' required  size='55' value="<?php echo $var1 ?>">
-		     
-		  
-          Apellido:
-          <input name='txtape'  placeholder=".........................................................................................................." type='text' maxlength='55' required  size='55' value="<?php echo $var2 ?>"></td>
-        </tr>
-		<td>Lugar de nacimiento:
-          <input type="text" name="p_lugarn"  placeholder="....................................................................................................................."  size="70" maxlength="60" value="<?php echo $var3?>"/>
-           
-		   Fecha de Nacimiento:
-		   <select name="dia" id="dia">
-
-        <?php
-        for($d=1;$d<=31;$d++){
-                               ?>
-
-          <option value="<?php=$d?>"> <?php=$d?> </option>
-        <?php
-                               }
-                               ?>
-      </select>
-        /
-        <select name="mes" id="mes">
-          <?php
-        for($m=1;$m<=12;$m++){
-                               ?>
-          <option value="<?php=$m?>"><?php=$m?></option>
-          <?php
-                               }
-                               ?>
-        </select>
-        /
-        <select name="anio" id="anio">
-          <?php
-        for($a=1960;$a<=2014;$a++){
-                               ?>
-          <option value="<?php=$a?>">
-            <?php=$a?>
-          </option>
-          <?php
-                               }
-                               ?>
-        </select>
-        <label for="select"></label></td>
-		  
-		  
-		  </TD> 
-
-
-     </TR>
-    
-    
-     <TR> 
-          <TD>Direccion:
-          <input type="text" name="direc"  placeholder="....................................................................................................................................................................." size="108" maxlength="100" value="<?php echo $var4?>"/>
-	
-	  <a></a> Edad: 
-          <?php echo $var6?>
-     
-	<label> Sexo:</label>
-   <select class="txt" name='sex'>
-     <option value="M">M</option>
-     <option value="F">F</option>
-    
-   </select>
-                               
-     	 
-</TD> 
-        </TR>  
-      <TR> 
-        <TD>Madre:
-          <input type="text" name="nmadre"  placeholder="................................................................" size="30" maxlength="30" value="<?php echo $var7?>"/>
-          Edad:
-          <input  type="number" name="edadm"  id="miCampo2" placeholder="00..." size="1" maxlength="1" min="" max=""  value=""/>
-		  
-          Profesion:
-         <input type="text" name="profm"  placeholder="................................................................"size="30" maxlength="30"  value="<?php echo $var9?>"/>
-          Telf:
-          <input type="text" name="telm" id="miCampo4"  placeholder="............................" size="15" maxlength="11" value="<?php echo $var10?>" onKeyPress="return permite(event, \'num\')" />    </TD>  
-     </TR>
-     <TR> 
-          <TD>Padre:
-          <input type="text" name="npadre"  placeholder="................................................................" size="30" maxlength="30" value="<?php echo $var11?>"/>
-          Edad:
-         <input  type="number" id="miCampo3" name="edadp" placeholder="00..." size="2" maxlength="2" min="" max=""  value="<?php echo $var12?>"/>
-          Profesion:
-          <input type="text" name="profp" placeholder="................................................................" size="30" maxlength="15"  value="<?php echo $var13?>"/>
-          Telf:
-          <input type="text" name="telp" id="miCampo5" placeholder="............................" size="15" maxlength="11"  value="<?php echo $var14?>"/></TD>  
-     </TR>
-    
-     
-     <TR> 
-          <TD>Motivo de Consulta
-          <input type="text" name="mc"  placeholder="........................................................................................................................................................................................................................................................................................................"  size="117" maxlength="118" value="<?php echo $var15?>"/></TD>
-          
-     </TR>
-     <TR> 
-          <TD>E:A:
-         <input type="text" name="ea"  placeholder="......................................................................................................................................................................................................................................................................"  size="130" maxlength="133" value="<?php echo $var16?>"/></TD>
-          
-     </TR>
-     
-    
-     <TR> 
-          <TD>ANTE.PER:
-          <input type="text" name="ant_p"  placeholder="......................................................................................................................................................................................................................................................................................................................................................................"  size="124" maxlength="125" value="<?php echo $var17?>"/></TD>
-          
-     </TR>
-     
-     <TR> 
-          <TD>ANTE.FLIARES:
-          <input type="text" name="ant_f"  placeholder="............................................................................................................................................................................................................................................................................................................................................................."  size="120" maxlength="200" value="<?php echo $var18?>"/></TD>
-          
-     </TR>
-     
-     <TR> 
-          <TD>EXAMEN FISICO:
-         PESO:
-          <input type="text" name="peso" placeholder="................................................" size="31" maxlength="20"  value="<?php echo $var19?>"/>
-           TALLA
-          <input type="text" name="talla"  placeholder="................................................."size="31" maxlength="30"  value="<?php echo $var20?>"/>
-          <A> </A> P.C
-          <input type="text" name="pc"  placeholder="................................................................" size="31" maxlength="30"  value="<?php echo $var21?>"/></TD>
-     </TR>
-    
-     <TR> 
-          <TD>DIAGNOSTICO:
-          <input type="text" name="diacno"  placeholder="................................................................................................................................................................................................................................................................................................................................................................"  size="120" maxlength="128" value="<?php echo $var22?>"/></TD>
-          
-     </TR>
-     
-   
-     <TR> 
-          <TD>TRATAMIENTO:
-          <input type="text" name="trat" placeholder="................................................................................................................................................................................................................................................................................................................................................................" size="121" maxlength="121" value="<?php echo $var23?>"/></TD>
-		  <?php echo '<td><input value=" '.$fecha.' " name="fecha" type="hidden" /></label></td>';
-		 ?> 
-		 
-     </TR>
-     
-    </TABLE>
-	</option>
-	</div>
-	</div>
-	
-	
-	</div>
-    <div class="body4">
-	<div class="main">
-		<div id="footer_menu">
-			<nav>
-			
-	
-					
-	
-  
-  
-     
-     
-   <ul>
-					<li><a href="pacienteslista.php">Listar</a></li>
-					<li class="bg_none"><input type="submit" name="btn1" value="Agregar"/></li>
-				</ul>
-			</nav>
-		</div>
-	</div>
-</div>
-    
-    
-   
 </form>
-
-
-<div class="body5">
-	<div class="main">
-		<footer>
-		@LogotipsMarketingBusiness
-		<br>
-		</footer>
-	</div>
 </div>
-<!--footer end-->
+</div>
+			</div>
+				
+
+  </div>
+</div>
+<!-- /.Horizontal Steppers -->
 <script type="text/javascript"> Cufon.now(); </script>
 
 </body>

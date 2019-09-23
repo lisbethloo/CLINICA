@@ -142,7 +142,7 @@ function validar(form)
            echo'<li>';
 echo"</br>";
 
-	   echo"&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='button'onClick='principal(),validar(this.form)'  value='Ingresar' />";
+	   echo"&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input class='btn btn-dark' type='button'onClick='principal(),validar(this.form)'  value='Ingresar' />";
 	echo"<div id='mensaje'></div>";
 	   echo'</li>';
 	 ?>

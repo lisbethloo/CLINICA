@@ -112,7 +112,8 @@ $fecha = date('y-m-d H:i:s',$tiempo);
 						<li><center><figure class="left marg_right1"></figure>
 						</center><div class="text1"></span></div></li>
 						<li><a href="../index.php">Inicio</a></li>
-						<li id="menu_active" class="bg_none"><a href="pacienteslista.php">Ficha de paciente </a></li>
+						<li id="menu_active" class="bg_none"><a href="historiap.php">Ficha de paciente </a></li>
+						<li id="menu_active" class="bg_none"><a href="pacienteslista.php">Lista de paciente </a></li>
 						<li><a href="../cirugia/pabellonmenu.php">Calendario</a></li>
 						<li><a href="../inventario/indexinventario.php">Inventario</a></li>
 						<li><a href="../sistema/sistemamenu.php">Sistema</a></li>

@@ -17,6 +17,7 @@ $fecha = date('d-m-Y ');
 <head>
 <title>Ficha de pacientes</title>
 <meta charset="utf-8">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <link rel="icon"  href="../images/logito.png" type="image/x-icon"/>
 <link rel="stylesheet" href="../css/reset.css" type="text/css" media="all">
 <link rel="stylesheet" href="../css/layout.css" type="text/css" media="all">
@@ -26,6 +27,11 @@ $fecha = date('d-m-Y ');
 <script type="text/javascript" src="../js/cufon-replace.js"></script> 
 <script type="text/javascript" src="../js/Myriad_Pro_300.font.js"></script>
 <script type="text/javascript" src="../js/Myriad_Pro_400.font.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<script src="https://kit.fontawesome.com/c675b21c5b.js" crossorigin="anonymous"></script>
 <!--[if lt IE 9]>
 	<script type="text/javascript" src="http://info.template-help.com/files/ie6_warning/ie6_script_other.js"></script>
 	<script type="text/javascript" src="js/html5.js"></script>
@@ -45,7 +51,8 @@ $fecha = date('d-m-Y ');
 					<div class="text1"></span></div>
 					</li>
 						<li ><a href="../index.php">Inicio</a></li>
-						<li id="menu_active"><a href="pacienteslista.php">Ficha de paciente </a></li>
+						<li id="menu_active"><a href="historiap.php">Ficha de paciente </a></li>
+						<li id="menu_active"><a href="pacienteslista.php">Lista de paciente </a></li>
 						<li><a href="../cirugia/pabellonmenu.php">Calendario</a></li>
 						<li ><a href="../inventario/indexinventario.php">Inventario</a></li>
 						<li><a href="../sistema/sistemamenu.php">Sistema</a></li>
@@ -132,11 +139,19 @@ if ($num_total_registros > 0) {
 	
 
   
-    <a></a><a></a><a></a><a></a><a><a></a><a></a></a><a></a><a></a><a></a><a></a><a></a><a></a><a></a><a></a><input title="ESCRIBA EL NOMBRE O CODIGO DEL PACIENTE QUE QUIERE BUSCAR" name="txtbus" type=text   placeholder='Buscar paciente.....'>
+	<a></a><a></a><a></a><a></a><a><a></a><a></a></a><a></a><a></a><a></a><a></a><a></a><a></a><a></a><a></a>
+	
+	
+	<div class="input-group-prepend">
+    <span class="input-group-text" id="addon-wrapping"><i class="fas fa-search"></i></span>
+    </div>
+ 	<input name="txtbus" type=text  class="form-control"  placeholder='Buscar pacientes' aria-label="Username" aria-describedby="addon-wrapping">
+	</div>
     <br></br>
  
 	<a> </a>
-    <input title="AQUI BUSCAS EL PACIENTE POR CODIGO,NOMBRE,APELLIDO,ETC" name="btn1" type="submit" value="Buscar">
+	 
+    <input title="AQUI BUSCAS EL PACIENTE POR CODIGO,NOMBRE,APELLIDO,ETC" class="btn btn-dark" name="btn1" type="submit" value="Buscar">
     
   </form>
   <center>
